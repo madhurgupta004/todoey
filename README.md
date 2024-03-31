@@ -1,16 +1,30 @@
-# todomate
+# Todoey - Your Personal Task Manager
 
-A new Flutter project.
+Todoey is a simple and intuitive task management app built using Flutter. It allows users to manage their daily tasks efficiently.
 
-## Getting Started
+## Features
 
-This project is a starting point for a Flutter application.
+- **Add Tasks:** Users can add their tasks to the list.
+- **Mark and Unmark Tasks:** Users can mark tasks as completed and unmark them if needed.
+- **Delete Tasks:** Users can delete tasks by holding the task name.
 
-A few resources to get you started if this is your first Flutter project:
+## Installation
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+Clone the project from GitHub:
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+```bash
+git clone https://github.com/madhurgupta004/todoey.git
+```
+
+Navigate to the project directory and install dependencies:
+
+```bash
+cd todoey
+flutter pub get
+```
+
+Run the app:
+
+```bash
+flutter run
+```
