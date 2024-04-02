@@ -44,7 +44,6 @@ class AddTaskScreen extends StatelessWidget {
               ),
               onPressed: () {
                 if (newTaskTitle == '') {
-                  double w = MediaQuery.of(context).size.width;
                   final snackBar = SnackBar(
                     // margin: EdgeInsets.all(10.0),
                     // behavior: SnackBarBehavior.floating,
