@@ -1,7 +1,6 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
 import 'package:flutter/material.dart';
-import 'package:todomate/models/task.dart';
 import 'package:provider/provider.dart';
 import 'package:todomate/models/task_data.dart';
 
@@ -44,8 +43,26 @@ class AddTaskScreen extends StatelessWidget {
                 backgroundColor: Colors.lightBlueAccent,
               ),
               onPressed: () {
-                Provider.of<TaskData>(context, listen: false).addTask(newTaskTitle);
-                Navigator.pop(context);
+                if (newTaskTitle == '') {
+                  double w = MediaQuery.of(context).size.width;
+                  final snackBar = SnackBar(
+                    // margin: EdgeInsets.all(10.0),
+                    // behavior: SnackBarBehavior.floating,
+                    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
+                    backgroundColor: Colors.lightBlueAccent,
+                    duration: Duration(seconds: 1),
+                    content: Center(
+                        child: Text(
+                      'Task name cannot be empty',
+                      style: TextStyle(color: Colors.black, fontSize: 14.0),
+                    )),
+                  );
+                  Navigator.pop(context);
+                  ScaffoldMessenger.of(context).showSnackBar(snackBar);
+                } else {
+                  Provider.of<TaskData>(context, listen: false).addTask(newTaskTitle);
+                  Navigator.pop(context);
+                }
               },
               child: Center(
                   child: Text(
